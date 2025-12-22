@@ -1,5 +1,45 @@
 #repeated: print result
-#repeated:
+#repeated: result calculation
+#calculator: adds, subtracts, multiplies, divides, power, modular and exits
+
+def add_num():
+    num1 = float(input("Enter num 1: "))
+    num2 = float(input("Enter num 2: "))
+    result = num1 + num2
+    print("Result is: ", result)
+
+def sub_num():
+    num1 = float(input("Enter num 1: "))
+    num2 = float(input("Enter num 2: "))
+    result = num1 - num2
+    print("Result is: ", result)
+
+def multi_num():
+    num1 = float(input("Enter num 1: "))
+    num2 = float(input("Enter num 2: "))
+    result = num1 * num2
+    print("Result is: ", result)
+
+def div_num():
+    num1 = float(input("Enter num 1: "))
+    num2 = float(input("Enter num 2: "))
+    if num2 == 0:
+        print("Num 2 cannot be zero")
+    else:
+        result = num1 / num2
+        print("Result is: ", result)
+
+def power_num():
+    num1 = float(input("Enter num 1: "))
+    num2 = float(input("Enter num 2: "))
+    result = num1 ** num2
+    print("Result is: ", result)
+
+def mod_num():
+    num1 = float(input("Enter num 1: "))
+    num2 = float(input("Enter num 2: "))
+    result = num1 % num2
+    print("Result is: ", result)
 
 while True:
     print("===Simple Integer Calculator===\n")
@@ -17,35 +57,24 @@ while True:
     if choice == 'q':
         break
 
-    num1 = float(input('Enter first number: '))
-    num2 = float(input('Enter second number: '))
 
     if choice == '1':
-        results = num1 + num2
-        print("results:", results)
+        add_num()
 
     elif choice == '2':
-        results = num1 - num2
-        print("results:", results)
-
+        sub_num()
     elif choice == '3':
-        results = num1 * num2
-        print("results:", results)
+       multi_num(  )
 
     elif choice == '4':
-        if num2 == 0:
-            print("Second number cannot be zero")
-        else:
-            results = num1 / num2
-            print("results:", results)
+        div_num()
 
     elif choice == '5':
-        results = num1 ** num2
-        print("results:", results)
+        power_num()
 
     elif choice == '6':
-        results = num1 % num2
-        print("results:", results)
+
+        mod_num()
 
     else:
         print('Invalid input')

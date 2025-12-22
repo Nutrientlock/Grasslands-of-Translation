@@ -17,8 +17,23 @@ def even_odd_checker():
 
 def unit_converter():
     while True:
-        p
-
+        print('\n===Unit Converter===\n')
+        print('Chosse an Option\n')
+        print('1. Convert kilometers to miles')
+        print('2. Convert miles to kilometers')
+        print('q. Exit\n')
+        choice = input('Enter your choice: ').strip().lower()   
+        if choice == 'q':
+            print('Exiting Unit Converter. Goodbye!\n')
+            break
+        elif choice == '1':
+            km = float(input('Enter distance in kilometers: '))
+            miles = km / 1.621371
+            print(f'{km} kilometers is equal to {miles:.2f} miles.\n')
+        elif choice == '2':
+            miles = float(input('Enter distance in miles: '))
+            km = miles * 1.621371
+            print(f'{miles} miles is equal to {km:.2f} kilometers.\n')
 
 
 while True:
@@ -27,7 +42,6 @@ while True:
     print('1. Calculator')
     print('2. even/odd Checker')    
     print('3. unit converter') 
-    print('4. text-based game')  
     print('q. Exit') 
     print('------------------------------')
     user_choice = input('Your choice: ').strip().lower()
@@ -42,3 +56,4 @@ while True:
     elif user_choice == '2': 
         even_odd_checker()
     elif user_choice == '3':
+        unit_converter()

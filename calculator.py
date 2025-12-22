@@ -55,6 +55,7 @@ while True:
     choice = input('Enter your choice: ').strip().lower()
 
     if choice == 'q':
+        print('Exiting the calculator. Goodbye!')
         break
 
 

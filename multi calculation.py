@@ -78,5 +78,3 @@ def multi_calculation():
             power_num()
         else:
             print("Invalid choice\n")
-
-multi_calculation()

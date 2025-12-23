@@ -1,5 +1,6 @@
 #importing other 
 import calculator
+import games
 
 #functions for multi calculator
 def add_num():
@@ -130,6 +131,7 @@ while True:
     print('2. even/odd Checker')    
     print('3. unit converter')
     print('4. Multi Calculation') 
+    print('5. Games')
     print('q. Exit') 
     print('------------------------------')
     user_choice = input('Your choice: ').strip().lower()
@@ -147,3 +149,7 @@ while True:
         unit_converter()
     elif user_choice == '4':
         multi_calculation()
+    elif user_choice == '5':
+        games.game()
+    else:
+        print('Invaild Input')

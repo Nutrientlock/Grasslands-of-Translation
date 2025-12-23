@@ -2,6 +2,7 @@
 import calculator
 import games
 import time
+import to_do_list
 
 #functions for multi calculator
 def add_num():
@@ -133,6 +134,7 @@ while True:
     print('3. unit converter')
     print('4. Multi Calculation') 
     print('5. Games')
+    print('6. To Do List')
     print('q. Exit') 
     print('------------------------------')
     user_choice = input('Your choice: ').strip().lower()
@@ -152,5 +154,7 @@ while True:
         multi_calculation()
     elif user_choice == '5':
         games.gamemodes()
+    elif user_choice == '6':
+        to_do_list.to_do()
     else:
         print('Invaild Input')

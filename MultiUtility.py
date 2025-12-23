@@ -1,3 +1,6 @@
+#importing other 
+import calculator
+
 #functions for multi calculator
 def add_num():
     num1 = float(input("Enter start number: "))
@@ -137,7 +140,7 @@ while True:
         break
     
     if user_choice == '1':
-        import calculator
+        calculator.calculator()
     elif user_choice == '2': 
         even_odd_checker()
     elif user_choice == '3':

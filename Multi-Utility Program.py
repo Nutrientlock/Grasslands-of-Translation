@@ -41,7 +41,8 @@ while True:
     print('Please select a utility')
     print('1. Calculator')
     print('2. even/odd Checker')    
-    print('3. unit converter') 
+    print('3. unit converter')
+    print('4. Multi Calculation') 
     print('q. Exit') 
     print('------------------------------')
     user_choice = input('Your choice: ').strip().lower()
@@ -57,3 +58,5 @@ while True:
         even_odd_checker()
     elif user_choice == '3':
         unit_converter()
+    elif user_choice == '4':
+        import multi_calculation

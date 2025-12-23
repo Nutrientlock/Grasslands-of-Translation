@@ -4,38 +4,58 @@ import games
 import time
 import to_do_list
 
+
 #functions for multi calculator
 def add_num():
+    result = []
     num1 = float(input("Enter start number: "))
     num_of_cal = int(input("How many calculations do you want to perform: "))
 
     for i in range(num_of_cal):
         num2 = float(input(f"Calculation {i+1} - Enter the next number: "))
         num1 = num1 + num2
-        print(f"Result: {num1}\n")
+        result.append(num1)
+        for item in result:
+            print(f"Result: {num1}\n")
+    
+
+    print('All Results: ',result)
 
 
 def sub_num():
+    result = []
     num1 = float(input("Enter start number: "))
     num_of_cal = int(input("How many calculations do you want to perform: "))
 
     for i in range(num_of_cal):
         num2 = float(input(f"Calculation {i+1} - Enter the next number: "))
         num1 = num1 - num2
-        print(f"Result: {num1}\n")
+        result.append(num1)
+        for item in result:
+            print(f"Result: {num1}\n")
+    
+
+    print('All Results: ',result)
 
 
 def mul_num():
+    result = []
     num1 = float(input("Enter start number: "))
     num_of_cal = int(input("How many calculations do you want to perform: "))
 
     for i in range(num_of_cal):
         num2 = float(input(f"Calculation {i+1} - Enter the next number: "))
         num1 = num1 * num2
-        print(f"Result: {num1}\n")
+        result.append(num1)
+        for item in result:
+            print(f"Result: {num1}\n")
+    
+
+    print('All Results: ',result)
 
 
 def div_num():
+    result = []
     num1 = float(input("Enter start number: "))
     num_of_cal = int(input("How many calculations do you want to perform: "))
 
@@ -45,17 +65,29 @@ def div_num():
             print("Cannot divide by zero\n")
         else:
             num1 = num1 / num2
+            result.append(num1)
+        for item in result:
             print(f"Result: {num1}\n")
+    
+
+    print('All Results: ',result)
 
 
 def power_num():
+    result = []
     num1 = float(input("Enter start number: "))
     num_of_cal = int(input("How many calculations do you want to perform: "))
 
     for i in range(num_of_cal):
         num2 = float(input(f"Calculation {i+1} - Enter the next number: "))
         num1 = num1 ** num2
-        print(f"Result: {num1}\n")
+        result.append(num1)
+        for item in result:
+            print(f"Result: {num1}\n")
+    
+
+    print('All Results: ',result)
+
 
 #multi calculator
 def multi_calculation():
@@ -66,10 +98,11 @@ def multi_calculation():
         print("3. Multiply")
         print("4. Divide")
         print("5. Power")
+        print('6. View all Saved')
         print("q. Exit")
 
         choice = input("Enter your choice: ").strip().lower()
-
+    
         if choice == "q":
             print("Goodbye!")
             break

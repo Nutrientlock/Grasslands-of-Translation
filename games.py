@@ -92,40 +92,57 @@ def game():
                 print('You Have Exit The Mind Trap\n\n')
                 time.sleep(2)
             else:
-                print('===GAME OVER===')
+                print('===GAME OVER===\n')
+                time.sleep(2)
         else:
+            time.sleep(2)
             print('You hesitate and freeze...')
-
-while True:
-    password = 'qwerty'
-    print('===WELCOME===')
-    user_input = input('Only One Chance\nEnter Access Code: ')
-
-    if user_input == password:
-        time.sleep(2)
-        print('Access Granted\n\n')
-        print('===GAME ROOM===\n')
-        print('1, The Dark Room')
-        print('2, Coming Soon')
-        print('q, Exit')
-
-        choice = input('Enter Your Choice: ').strip().lower()
-
-        if choice == 'q':
-            print('Goodbye!')
-            break
-        elif choice == '1':
-            print('\n===THE DARK ROOM===\n')
             time.sleep(2)
-            game()
+            print("Your eyes start shutting down")
+            time.sleep(2)
+            print('Your body starts sinking into the floor')
+            time.sleep(2)
+            print('You')
+            time.sleep(2)
+            print('Got')
+            time.sleep(2)
+            print('Burried')
+            time.sleep(2)
+            print('Alive')
+            time.sleep(2)
+            print('===GAME OVER===\n')
+            time.sleep(2)
+
+def gamemodes():
+    while True:
+        if __name__ == '__main__': 
+            gamemodes()
+        password = 'qwerty'
+        print('===WELCOME===')
+        user_input = input('Only One Chance\nEnter Access Code: ')
+
+        if user_input == password:
+            time.sleep(2)
+            print('Access Granted\n\n')
+            print('===GAME ROOM===\n')
+            print('1, The Dark Room')
+            print('2, Coming Soon')
+            print('q, Exit')
+
+            choice = input('Enter Your Choice: ').strip().lower()
+
+            if choice == 'q':
+                print('Goodbye!')
+                break
+            elif choice == '1':
+                print('\n===THE DARK ROOM===\n')
+                time.sleep(2)
+                game()
+            else:
+                print('COMING SOON!')
+                print('Will Be Returned To Access Page\n')
+                time.sleep(2)
+
         else:
-            print('COMING SOON!')
-            print('Will Be Returned To Access Page\n')
-            time.sleep(2)
-
-    else:
-        print('Access Denied')
-        break
-
-
-    
+            print('Access Denied')
+            break

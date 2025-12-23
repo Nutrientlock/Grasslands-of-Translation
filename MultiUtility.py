@@ -1,6 +1,7 @@
 #importing other 
 import calculator
 import games
+import time
 
 #functions for multi calculator
 def add_num():
@@ -150,6 +151,6 @@ while True:
     elif user_choice == '4':
         multi_calculation()
     elif user_choice == '5':
-        games.game()
+        games.gamemodes()
     else:
         print('Invaild Input')

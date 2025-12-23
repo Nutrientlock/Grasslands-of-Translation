@@ -41,43 +41,47 @@ def mod_num():
     result = num1 % num2
     print("Result is: ", result)
 
-while True:
-    print("===Simple Integer Calculator===\n")
-    print("What is your Choice")
-    print("1, Addition")
-    print("2, Subtraction")
-    print("3, Multiplication")
-    print("4, Division")
-    print("5, Power")
-    print("6, Modular")
-    print('q, Exit')
+def calculator():
+    while True:
+        print("===Simple Integer Calculator===\n")
+        print("What is your Choice")
+        print("1, Addition")
+        print("2, Subtraction")
+        print("3, Multiplication")
+        print("4, Division")
+        print("5, Power")
+        print("6, Modular")
+        print('q, Exit')
 
-    choice = input('Enter your choice: ').strip().lower()
+        choice = input('Enter your choice: ').strip().lower()
 
-    if choice == 'q':
-        print('Exiting the calculator. Goodbye!')
-        break
+        if choice == 'q':
+            print('Exiting the calculator. Goodbye!')
+            break
 
 
-    if choice == '1':
-        add_num()
+        if choice == '1':
+            add_num()
 
-    elif choice == '2':
-        sub_num()
-    elif choice == '3':
-       multi_num(  )
+        elif choice == '2':
+            sub_num()
+        elif choice == '3':
+            multi_num(  )
 
-    elif choice == '4':
-        div_num()
+        elif choice == '4':
+            div_num()
 
-    elif choice == '5':
-        power_num()
+        elif choice == '5':
+            power_num()
 
-    elif choice == '6':
+        elif choice == '6':
 
-        mod_num()
+            mod_num()
 
-    else:
-        print('Invalid input')
+        else:
+            print('Invalid input')
+            
+if __name__ == '__main__':
+    calculator()
 
     

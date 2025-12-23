@@ -79,3 +79,4 @@ def multi_calculation():
         else:
             print("Invalid choice\n")
 
+multi_calculation()

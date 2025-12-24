@@ -1,0 +1,38 @@
+bank = {
+    "Accont Name": 'Karisa',
+    'Balance': 50000
+}
+
+def view(bank):
+    print("Accont Name", bank["Accont Name"])
+    print("Balance", bank['Balance'])
+
+def update_balance(bank):
+    new_balance = int(input('Enter new balance: '))
+    bank['Balance'] = new_balance
+
+
+def menu():
+    while True:
+        print('==this is menu==')
+        print('choose')
+        print('1. veiw')
+        print('2. update')
+        
+        print('q. exit')
+        choice = input('enter choice: ').strip().lower()
+        if choice == 'q':
+            print('bye')
+            break
+        elif choice == '1':
+            view(bank)
+        elif choice == '2':
+            update_balance(bank)
+        else:
+            print('invaild')
+
+if __name__ == '__main__':
+    menu()
+
+
+

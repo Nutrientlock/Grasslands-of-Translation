@@ -7,9 +7,19 @@ def view(bank):
     print("Accont Name", bank["Accont Name"])
     print("Balance", bank['Balance'])
 
-def update_balance(bank):
-    new_balance = int(input('Enter new balance: '))
-    bank['Balance'] = new_balance
+def deposit(bank):
+    new_balance = int(input('Enter Deposit Amount: '))
+    bank['Balance'] += new_balance
+
+def withdraw(bank):
+    new_balance = float(input('Enter withdraw Amount: '))
+    if new_balance > bank['Balance']:
+        print('Not Enough Funds.')
+    elif new_balance <= bank['Balance']:
+        bank['Balance'] -= new_balance
+        print('Tranaction Made!!')
+    else:
+        print('Invaild')
 
 
 def menu():
@@ -17,7 +27,8 @@ def menu():
         print('==this is menu==')
         print('choose')
         print('1. veiw')
-        print('2. update')
+        print('2. deposit')
+        print('3. withdraw')
         
         print('q. exit')
         choice = input('enter choice: ').strip().lower()
@@ -27,7 +38,9 @@ def menu():
         elif choice == '1':
             view(bank)
         elif choice == '2':
-            update_balance(bank)
+            deposit(bank)
+        elif choice == '3':
+            withdraw(bank)
         else:
             print('invaild')
 

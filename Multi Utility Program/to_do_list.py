@@ -1,5 +1,8 @@
 task = []
 
+with open('tasks.txt', 'r') as f:
+    for line in f:
+        task.append(line.strip())
 def to_do():
     while True:
         print('\n===Welcome===')

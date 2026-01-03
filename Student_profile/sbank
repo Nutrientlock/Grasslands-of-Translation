@@ -1,25 +1,48 @@
 bank = {
-    "Accont Name": 'Karisa',
-    'Balance': 50000
+    "account_name": 'karisa',
+    'balance': 50000.0,
+    'transactions': []
 }
 
 def view(bank):
-    print("Accont Name", bank["Accont Name"])
-    print("Balance", bank['Balance'])
+    print("accont name", bank["account_name"])
+    print("balance", bank['balance'])
+    print('--------------------------')
+    print('\tTransactions')
+    print('--------------------------')
+    for items in bank['transactions']:
+       print(items)
 
 def deposit(bank):
-    new_balance = int(input('Enter Deposit Amount: '))
-    bank['Balance'] += new_balance
+    print('\n==Deposit==\n')
+    try:
+        new_balance = float(input('Enter Deposit Amount: '))
+        if new_balance  <= 0:
+            print('\nMust be more than zero.\n')
+        else:
+            bank['balance'] += new_balance
+            print('\nTransaction Made!!\n')
+            bank['transactions'].append(f'deposit{new_balance}')
+    except ValueError:
+        print('You must enter a number!!\n')
 
 def withdraw(bank):
-    new_balance = float(input('Enter withdraw Amount: '))
-    if new_balance > bank['Balance']:
-        print('Not Enough Funds.')
-    elif new_balance <= bank['Balance']:
-        bank['Balance'] -= new_balance
-        print('Tranaction Made!!')
-    else:
-        print('Invaild')
+    print('\n==Withdrawal==\n')
+    try:
+        new_balance = float(input('Enter withdraw Amount: '))
+        if new_balance > bank['balance']:
+            print('\nNot Enough Funds.')
+        elif new_balance <= 0:
+            print('Funnds cannot be negitive.\n')
+        elif new_balance <= bank['balance']:
+            bank['balance'] -= new_balance
+            bank['transactions'].append(f'Withdrew {new_balance}')
+            print('\nTranaction Made!!\n')
+        else:
+            print('\nInvaild\n')
+    except ValueError:
+        print('Not A Vaild Input!!!')
+
 
 
 def menu():

@@ -2,6 +2,12 @@
 #repeated: result calculation
 #calculator: adds, subtracts, multiplies, divides, power, modular and exits
 
+import os
+
+def clear_screen():
+    print("\n" * 50)  # Prints 50 blank lines
+
+
 def add_num():
     num1 = float(input("Enter num 1: "))
     num2 = float(input("Enter num 2: "))
@@ -80,6 +86,9 @@ def calculator():
 
         else:
             print('Invalid input')
+        
+        input("\nPress Enter to continue...")  
+        clear_screen()
             
 if __name__ == '__main__':
     calculator()

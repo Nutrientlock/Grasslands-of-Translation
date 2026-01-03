@@ -1,6 +1,7 @@
 import time
 
 def game():
+    inventory = []
     time.sleep(2)
     print('You enter a dark room')
     time.sleep(2)
@@ -46,6 +47,8 @@ def game():
             time.sleep(2)
             print('You step forward')
             time.sleep(2)
+            print('You pick up a Bomb')
+            inventory.append('Bomb')
             print("....")
             time.sleep(1)
             print("..")
@@ -62,6 +65,7 @@ def game():
             time.sleep(2)
             print('===GAME OVER===\n\n')
             time.sleep(3)
+            print('Final Inventory', inventory)
         elif door_choice == 'right':
             time.sleep(2)
             print('You enter the golden door...')
@@ -112,6 +116,7 @@ def game():
             time.sleep(2)
             print('===GAME OVER===\n')
             time.sleep(2)
+
 
 def gamemodes():
     while True:

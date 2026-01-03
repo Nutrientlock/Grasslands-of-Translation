@@ -127,15 +127,18 @@ def even_odd_checker():
         print('1.Check if even or odd')
         print('q.Exit\n')
         choice = input('Enter your choice: ').strip().lower()   
-        if choice == 'q':
-            print('Exiting Even/Odd Checker. Goodbye!\n')
-            break
-        elif choice == '1':
-            checker_num = float(input('Enter a number to check if its even or odd:'))
-            if checker_num % 2 == 0:
-                print(f'{checker_num} is an Even number.\n')
-            else:
-                print(f'{checker_num} is an Odd number.\n')     
+        try:
+            if choice == 'q':
+                print('Exiting Even/Odd Checker. Goodbye!\n')
+                break
+            elif choice == '1':
+                checker_num = float(input('Enter a number to check if its even or odd:'))
+                if checker_num % 2 == 0:
+                    print(f'{checker_num} is an Even number.\n')
+                else:
+                    print(f'{checker_num} is an Odd number.\n')     
+        except ValueError:   
+            print('Invaild')
 
 #unit converter
 def unit_converter():
@@ -149,10 +152,12 @@ def unit_converter():
         if choice == 'q':
             print('Exiting Unit Converter. Goodbye!\n')
             break
+
         elif choice == '1':
             km = float(input('Enter distance in kilometers: '))
             miles = km / 1.621371
             print(f'{km} kilometers is equal to {miles:.2f} miles.\n')
+
         elif choice == '2':
             miles = float(input('Enter distance in miles: '))
             km = miles * 1.621371
@@ -172,11 +177,10 @@ while True:
     print('------------------------------')
     user_choice = input('Your choice: ').strip().lower()
     print("\n------------------------------\n")
-    
     if user_choice == 'q':
         print('Exiting the Multi-Utility Program. Goodbye!\n')
         break
-    
+        
     if user_choice == '1':
         calculator.calculator()
     elif user_choice == '2': 
